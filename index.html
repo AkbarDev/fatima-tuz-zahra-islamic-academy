@@ -368,7 +368,13 @@
                         </div>
                     </div>
                 </div>
-                <form class="contact-form" id="contactForm">
+                <form class="contact-form" id="contactForm" action="https://formsubmit.co/asmamafiz@gmail.com"
+                    method="POST">
+                    <!-- FormSubmit Configuration -->
+                    <input type="hidden" name="_subject" value="New Contact Form Submission - FTZ Academy">
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_template" value="table">
+
                     <div class="form-group">
                         <label for="name">Full Name *</label>
                         <input type="text" id="name" name="name" required placeholder="Enter your full name">
@@ -385,11 +391,11 @@
                         <label for="course">Course Interest</label>
                         <select id="course" name="course">
                             <option value="">Select a course</option>
-                            <option value="noorani-qaida">Noorani Qaida</option>
-                            <option value="quran-recitation">Quran Recitation</option>
-                            <option value="hifz">Hifz Program</option>
-                            <option value="tajweed">Tajweed</option>
-                            <option value="islamic-studies">Islamic Studies</option>
+                            <option value="Noorani Qaida">Noorani Qaida</option>
+                            <option value="Quran Recitation">Quran Recitation</option>
+                            <option value="Hifz Program">Hifz Program</option>
+                            <option value="Tajweed">Tajweed</option>
+                            <option value="Islamic Studies">Islamic Studies</option>
                         </select>
                     </div>
                     <div class="form-group">
@@ -434,6 +440,12 @@
             </div>
         </div>
     </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/15551234567?text=Hello!%20I'm%20interested%20in%20learning%20more%20about%20FTZ%20Academy"
+        class="whatsapp-float" target="_blank" aria-label="Contact us on WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
 
     <script src="script.js"></script>
 </body>
