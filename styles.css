@@ -427,17 +427,17 @@ img {
     background-position: center;
 }
 
-/* Placeholder Colors for Course Images */
+/* Course Banner Images */
 .course-1 {
-    background-image: linear-gradient(45deg, #044d42, #0a6c5d);
+    background-image: url('images/noorani-qaida.png');
 }
 
 .course-2 {
-    background-image: linear-gradient(45deg, #c5a059, #e0c078);
+    background-image: url('images/quran-recitation.png');
 }
 
 .course-3 {
-    background-image: linear-gradient(45deg, #2c3e50, #4a6582);
+    background-image: url('images/hifz-program.png');
 }
 
 .course-content {
