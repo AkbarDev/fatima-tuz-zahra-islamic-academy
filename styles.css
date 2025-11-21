@@ -471,6 +471,84 @@ img {
     flex-grow: 1;
 }
 
+/* Testimonials Section */
+.testimonials {
+    background-color: var(--color-bg);
+}
+
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+}
+
+.testimonial-card {
+    background: var(--color-white);
+    padding: 2rem;
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition);
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rgba(0, 0, 0, 0.02);
+}
+
+.testimonial-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+}
+
+.stars {
+    display: flex;
+    gap: 0.3rem;
+    margin-bottom: 1.5rem;
+    color: var(--color-secondary);
+    font-size: 1rem;
+}
+
+.testimonial-text {
+    color: var(--color-text);
+    font-size: 1rem;
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+    flex-grow: 1;
+    font-style: italic;
+}
+
+.testimonial-author {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.author-avatar {
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, var(--color-primary), var(--color-primary-light));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-white);
+    font-size: 1.2rem;
+    flex-shrink: 0;
+}
+
+.author-info h4 {
+    margin-bottom: 0.2rem;
+    font-size: 1rem;
+    font-family: 'Outfit', sans-serif;
+    font-weight: 600;
+    color: var(--color-text);
+}
+
+.author-info p {
+    color: var(--color-text-light);
+    font-size: 0.85rem;
+}
+
 /* Contact Section */
 .contact {
     background-color: var(--color-bg);
@@ -700,10 +778,16 @@ img {
         grid-template-columns: 1fr;
     }
 
+
     /* Contact Section Responsive */
     .contact-wrapper {
         grid-template-columns: 1fr;
         gap: 2rem;
+    }
+
+    /* Testimonials Responsive */
+    .testimonials-grid {
+        grid-template-columns: 1fr;
     }
 
     .section-title {
