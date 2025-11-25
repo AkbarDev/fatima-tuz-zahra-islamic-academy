@@ -59,4 +59,33 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
+
+    // Azan Audio Logic
+    const welcomeModal = document.getElementById('welcome-modal');
+    const playAzanBtn = document.getElementById('play-azan-btn');
+    const closeModalBtn = document.getElementById('close-modal-btn');
+    const azanAudio = document.getElementById('azan-audio');
+
+    // Check if we should show the modal (using sessionStorage so it resets per session)
+    if (!sessionStorage.getItem('azanDecisionMade')) {
+        // Show modal after a short delay for better UX
+        setTimeout(() => {
+            welcomeModal.classList.add('active');
+        }, 1000);
+    }
+
+    playAzanBtn.addEventListener('click', () => {
+        azanAudio.play().then(() => {
+            console.log('Azan playing');
+        }).catch(error => {
+            console.error('Audio playback failed:', error);
+        });
+        welcomeModal.classList.remove('active');
+        sessionStorage.setItem('azanDecisionMade', 'true');
+    });
+
+    closeModalBtn.addEventListener('click', () => {
+        welcomeModal.classList.remove('active');
+        sessionStorage.setItem('azanDecisionMade', 'true');
+    });
 });
